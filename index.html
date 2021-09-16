@@ -524,7 +524,7 @@
     let cookie=document.querySelector(".cookie");
     let cookiePop=document.querySelector(".cookie-main-div");
     ansButCheck=false;let questionLoads;
-    
+    let click=true;
       function storeCount(){
      if(localStorage.getItem("mathcookie")!==null){
      boxStore=Number(localStorage.getItem("mathcookie"));
@@ -630,6 +630,8 @@
                       radioTitle[1].innerHTML=port.opt2;
                       radioTitle[2].innerHTML=port.opt3;
                       questionText.innerHTML=port.question;
+                     click=false;
+                      navDisplay.style.top="-120%"
                    document.querySelector(".whole").style.display="none";
                     }
                        coded();
@@ -776,14 +778,14 @@
        document.querySelector(".main-score-div").style.top="-110%";
           
           //fixed nav display codes
-          let click=true
+          
           navIcon.onclick=function (){
             if(click){
             document.querySelector(".welcome").style.display="none";
             navDisplay.style.top="0";
             }
             else{
-            navDisplay.style.top="-120%"
+            navDisplay.style.top="-120%";
             }
             click=!click;
           }
