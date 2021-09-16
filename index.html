@@ -781,15 +781,9 @@
             if(click){
             document.querySelector(".welcome").style.display="none";
             navDisplay.style.top="0";
-            navIconLine[0].style.cssText="margin-left:10px;transform:rotateZ(45deg) translateY(12px) translateX(5px);width: 40px";
-            navIconLine[1].style.cssText="transform:rotateZ(-45deg) translateX(0px) translateY(7px)";
-            
             }
             else{
-            navDisplay.style.top="-120%";
-            navIconLine[0].style.cssText="margin-left:0;transform:rotateZ(0deg) translateY(0px) translateX(0px);width:50px";
-            navIconLine[1].style.cssText="transform:rotateZ(0deg) translateX(0px) translateY(0);";
-            
+            navDisplay.style.top="-120%"
             }
             click=!click;
           }
