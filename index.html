@@ -609,7 +609,6 @@
               if(call.readyState == 4) {
                   let questionLoad=JSON.parse(call.responseText);
                   questionLoads=questionLoad;
-                   document.querySelector(".whole").style.display="none";
                    for(let i=0;i<questionLoad.question.length;i++){
                    randArr[i]=i;
                    }
@@ -631,7 +630,7 @@
                       radioTitle[1].innerHTML=port.opt2;
                       radioTitle[2].innerHTML=port.opt3;
                       questionText.innerHTML=port.question;
-                   
+                   document.querySelector(".whole").style.display="none";
                     }
                        coded();
                        
