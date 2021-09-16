@@ -1,0 +1,77 @@
+{
+    "name":"sport Section",
+    "question":[
+        {
+          "sol":"frontstroke",
+          "opt1":"frontstroke",
+          "opt2":"backstroke",
+          "opt3":"butterfly",
+          "question":"which of these is not a stroke regulated in swimming? "
+        },
+        {
+        "sol":"26.2miles",
+        "opt1":"24.2miles",
+        "opt2":"26.2miles",
+        "opt3":"20.2miles",
+        "question":"How long is the total distance of a marathon?"
+        },
+        {
+        "sol":"golf",
+        "opt1":"golf",
+        "opt2":"cricket",
+        "opt3":"lawn-tennis",
+        "question":"What is the only sport to be played on the moon?"
+        },
+        {
+        "sol":"6",
+        "opt1":"5",
+        "opt2":"4",
+        "opt3":"6",
+        "question":"How many NBA championships did Michael Jordan win with the Chicago Bulls?"
+        },
+        {
+        "sol":"6",
+        "opt1":"5",
+        "opt2":"4",
+        "opt3":"6",
+        "question":"How many NBA championships did Michael Jordan win with the Chicago Bulls?"
+        },
+        {
+        "sol":"6",
+        "opt1":"5",
+        "opt2":"4",
+        "opt3":"6",
+        "question":"How many NBA championships did Michael Jordan win with the Chicago Bulls?"
+        },
+        {
+        "sol":"fencing",
+        "opt1":"lawn tennis",
+        "opt2":"fencing",
+        "opt3":"badminton",
+        "question":"In which sport would competitors use a piece of equipment known as a foil?"
+        },
+        {
+        "sol":"baseball",
+        "opt1":"hockey",
+        "opt2":"cricket",
+        "opt3":"baseball",
+        "question":"The Chicago Cubs and Boston Red Sox play which sport?"
+        },
+        {
+        "sol":"2000",
+        "opt1":"1996",
+        "opt2":"2004",
+        "opt3":"2000",
+        "question":"At which Olympics did Kelly Holmes win two gold medals?"
+        },
+        {
+        "sol":"diving",
+        "opt1":"swimming",
+        "opt2":"diving",
+        "opt3":"long-jump",
+        "question":"Which sport involves tucks and pikes? "
+        }
+        
+
+    ]
+}

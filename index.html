@@ -1,0 +1,798 @@
+  
+        <Doctype html>
+        <head>
+        <title></title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="font-face.css">
+        
+        </head>
+           <style>
+               body{color:rgb(230,230,230) !important;padding:0;margin:0;
+                   font-family: nexabold Arial, Helvetica, sans-serif ;
+                   background:linear-gradient(rgba(10,10,20,0.7),rgba(10,10,20,0.7)),url("background.jpg");background-size:cover;
+               }
+               *{
+               -webkit-touch-callout: none; /* iOS Safari */
+               -webkit-user-select: none; /* Safari */
+               -khtml-buser-select: none; /* Konqueror HTML */
+               -moz-user-select: none; /* Old versions of Firefox */
+               -ms-user-select: none; /* Internet Explorer/Edge */
+               user-select: none; /* Non-prefixed version, curr*/ }
+               
+              .topic{
+                  font-size:1.7em;font-family: Arial, Helvetica, sans-serif;
+                  text-transform: capitalize;font-weight:900;
+                 padding:0.85em 0.35em;z-index:30;
+                  color:rgba(230,230,230,0.5);
+                  font-family:newfont2;
+              }
+              .ans-contain{
+                  display:block;padding-left:1em;font-weight: 600;
+                  margin: 1em 0;font-family :newfont2;
+              }
+              
+              .ans-contain>span{transition: 0.25s;padding-left:1em;
+                  font-size:1.1em;color:rgb(230,230,230);font-style:normal;
+              font-weight:300;
+              }
+              #answer{
+                  background: rgba(69,35,219,1);padding:0.79em 0;border:none;width: 100px;
+                  font-weight: 600;color:rgb(230,230,230);border-radius: 50px;
+                  margin-top:1em;font-size: 1.1em;outline:none;margin-left:calc(50% - 5em);
+                  font-family: newfont2;width:10em;transition:0.2s;transform-origin:0 100%;
+                   box-shadow :inset 0px -6px 2px rgba(0,0,0,0.4);margin-bottom:1em;
+                   position: relative;
+              }
+              #answer>span{
+              position: absolute; top:-100%;left:25%;width:90%;font-family: newfont2;display: none;
+              font-size:13px;font-weight:300;background: rgb(233,24,35);z-index:30;padding:0.3em;
+              border-radius:7px 7px 7px 0;box-shadow :inset 0px -6px 2px rgba(0,0,0,0.4);
+              
+              }
+              #answer>span::before{
+              content: "";position: absolute;top:99%;left:0; border-left:10px solid rgb(173,24,35);
+              background: black;border-bottom:10px solid rgb(10,10,20);z-index:-1;
+              }
+              input[type=radio]{
+                  transform:scale(2);-webkit-appearance:none;display: inline-block;
+                  width:13px;height:13px;outline:none;
+                  background: rgba(69,35,219,0.5);border-radius:50%;position:relative;
+                  overflow:hidden;z-index:1;vertical-align:middle;
+                  box-shadow :inset 0px -3px 1px rgba(0,0,0,0.4);margin-bottom:1em;
+                  margin-bottom:0.08em;
+              }
+              input[type="radio"]::before{
+                 content:"";width:70%;height:70%;border-radius: inherit;transition:0.3s;
+                 background: rgb(109,85,220);top:15%;left:15%;position:absolute;
+                 box-shadow :inset 0px -3px 1.3px rgba(0,0,0,0.4);margin-bottom:1em;
+                 transform: scale(0)
+              }
+              .radio:checked::before{
+               transform: scale(1)
+              }
+              #next{
+                  background: rgb(69, 35, 219);padding:0.5em 2em;
+                  border:none;width:150px;
+                  font-weight: 600;color:rgb(230,230,230);outline:none;
+                  margin:1.5em 0 0.8em 0;font-size:1.3em;border-radius: 50px;
+                  background: linear-gradient(to bottom,rgb(88, 65, 190) ,rgb(28, 10, 109) );
+                  margin-left:calc(50% - 100px);font-family: nexabold;
+                  display: none;
+                 
+              }
+              #ans-hide{display:none}
+              #question-text{
+                  font-size:1.3em;border: 3.5px double rgba(240,240,240,0.6);
+                  font-weight: 400;color:rgb(230,230,230);padding: 1em 0.5em;
+                  word-spacing:3px;line-height:1.25;font-family: newfont2;  
+                  position:relative;border-radius: 5px;
+              }
+              #question-text::before{
+                  content:"?";font-family: newfont2;display: block;font-size: 3em;
+                  height:60px;border-radius:50px;
+                  padding: 0;left:90%;top:-10%;
+                  position:absolute;font-weight:900;
+                  -webkit-text-stroke:2px rgba(230,230,230,0.5);-webkit-text-fill-color:transparent;
+                  
+              }
+              #question-text::after{
+              content:"Question";font-family: newfont2;display: block;font-size: 1em;
+              height:15px;border-radius:50px;
+              padding: 0;left:0 ;top:-16px;
+              position:absolute;font-weight:900;
+              -webkit-text-stroke:0.5px rgba(230,230,230,0.7);
+              -webkit-text-fill-color:transparent;             
+              }
+              .question-div{
+                 padding:0.5em 4%;background: rgba(40,40,40,1);
+                 border-radius: 7px;
+              }
+              .score>span{
+                  display:inline-block;width:47%;padding: 1%;
+                  position:relative;z-index:4;
+                  /*clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);*/
+              }
+              
+              .score>span>i{
+              display:inline-flex;width:60px;height:60px;background: rgb(69, 35, 219);
+              font-weight: 600;font-size:1.5em;border-radius:50%;
+              position:relative;font-style:normal;justify-content:center;align-items:center; 
+             font-family: nexabold;box-shadow :inset 0px -6px 2px rgba(0,0,0,0.4);margin-bottom:1em;
+             
+              color:rgba(230,230,230,0.5);
+              
+              }
+              .score>span:nth-of-type(2){
+                  text-align: right;
+              }
+              .score>span>i::before{
+              content:"";position:absolute;height:50px;width:10px;border-radius:50px;
+              top:-40px;left:calc(50% - 5px);background: inherit;z-index:-1;
+              }
+              .main-score-div{
+              width:100vw;height:100vh;position:fixed;top:-100%;left:0;
+              background: rgba(0,0,0,0.7);z-index:15;transition:0.4s;
+              text-align:center;
+              }
+              .pop-div-score{
+                  position:absolute;width:280px;left:calc(50% - 150px);
+                  top:10%;transition: 0.55s;
+                  background: radial-gradient(at top left,rgb(88, 65, 190) ,rgb(29, 9, 116) );
+                  border-radius: 5px;position:relative;
+                  z-index: 1800;text-align: center;
+                  padding:1em 0.4em;font-family: nexabold;
+              }
+               .pop-div-score::before{
+                    content:"";position:absolute;height:100%;width:10px;border-radius:50px;
+                    top:-90%;left:calc(50% - 5px);background: inherit;z-index:-1;
+               }
+               .radio-title{
+                  display: inline-block;background: rgb(29,9,166);border-radius: 50px;
+                  margin: 0 0.75em;padding: 0.65em 3.1em;vertical-align:middle;
+                 /* clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%);*/
+                  position:relative;z-index:5;
+                  box-shadow :inset 0px -4px 1px rgba(0,0,0,0.4);margin-bottom:0.1.5em;
+                  
+               }
+               .radio-title::before{
+                 content:"";width:1.1em;position:absolute;border-radius: 0 50px 50px 0;z-index:-1;
+                 height:5px;left:-0.85em;background: inherit;top:calc(50% - 3px);
+                 display:inline-block;
+                 box-shadow :inset 0px -3px 1px rgba(0,0,0,0.4);margin-bottom:1em;
+                 
+               }
+              .pop-div-score>h2{
+                  font-weight: 800;
+              }
+              .pop-div-score>span{
+                  display:inline-block;padding:0.57em 0;color:rgba(230,230,230,0.7);
+                  width:50px;text-align: center;font-size:1.2em;
+              }.pop-div-score>b{
+                  font-family: nexabold;font-size:1.3em;
+                 display:block;padding:0.57em 0.25em;color:rgba(230,230,230,0.3);
+                     }
+              .cancle-pop{
+                  position:absolute;display:inline-flex;box-shadow: 0 0 6px rgba(0,0,0,0.3);
+                  width:70px;height:70px;top:calc(100% - 55px);left:calc(100% - 55px);border-radius: 50%;
+                  justify-content:center;align-items:center;font-weight:900;font-size: 1.3em;
+              }
+              .flex{
+             display: flex;align-items: center;
+            
+              }
+              .nav-bar{
+              margin:0;padding:0; background: rgb(69, 35, 219);width:100%;
+              z-index:9000;
+             
+              }
+              .nav-bar>b{
+              width: 70% ;margin: 0;display: inline-block;
+              }
+              .nav-bar>.img{z-index:1000;
+              width: 10%;margin: 0;display: inline-block;
+              padding: 3px;border:2px solid rgb(69,35,219)!
+              }
+              .nav-bar>.nav-icon-div{z-index:100;
+              width: 20%;display: inline-block;
+              }
+              .nav-icon{
+                 width:40px;height:40px;display:inline-block;
+                 padding-top:1em
+                
+              }
+              .nav-icon>i:nth-of-type(1){
+                  width:50px;height:4px;background: rgba(230,230,230,0.4);display:inline-block;
+                  border-radius: 50px;margin:0.25em 0;transition:0.35s;
+                  
+              }
+              .nav-icon>i:nth-of-type(2){
+              width:40px;height:4px;background: rgba(230,230,230,0.7);display:inline-block;
+              border-radius: 50px;margin-left:0%;transition:0.3s;
+              }
+              .nav-display{
+              position: fixed;top:-100%;left:0;width:230px;height:100vh;background: black;
+              transition:0.45s;z-index:2000;
+              background: radial-gradient(at bottom right,rgb(10,8,20),rgb(45,45,65));
+              }
+              .nav-display>h3{
+               padding:1.50em 0.4em;background: rgb(69,35,219);margin:0;margin-bottom:1em;
+               font-family: newfont2;font-weight:900;
+               border-radius: 0px;text-transform:uppercase;
+              }
+              .nav-display>span{
+              display: block;font-size:1.2em;padding:0.6em 0.2em;font-family:newfont2;
+              border-bottom: 2px solid rgba(100,100,100,0.3);margin:0 0.8em;margin-left:0.3em;
+              }
+              .icon-img{
+              width:25px;height:25px;object-fit:cover;
+              border-radius: 50%;vertical-align:middle;
+              margin-right: 0.3em;padding:3px;border:2px solid rgb(65,35,219)
+              }
+              #trophy{
+                 width: 80px;
+              }
+              .trophy{
+                display: none;
+              }
+              .relative{
+              position:relative
+              }
+              .cookie{
+                position:fixed;top:calc(100% - 140px);width:50px;height:60px;
+                left:calc(100% - 49px);color: rgb(240,240,240);
+                background: teal;display: inline-flex;z-index:1000;
+                justify-content:center;align-items:center;
+              font-family: newfont2;border-radius: 5px 0 0 5px;
+                box-shadow :inset 0px -6px 2px rgba(0,0,0,0.3);
+              }
+              .coin{
+                 width:24px;
+              }
+              .pop-coin{
+              width: 30px;position:absolute;top:-20px;left:50%;z-index:-1;
+              animation:0.4s 1 linear fill-coin;
+             display: none; }
+              @keyframes fill-coin{
+                0%{transform:translateY(0) scale(1); opacity: 0.8}
+                 60%{transform:translateY(-100px) scale(1)}
+                 61%{transform:translateY(-102px) scale(1); opacity: 0.5}
+                 
+                 100%{transform:translateY(-150px) scale(3.5) ;opacity: 0}
+                 
+                    }
+                    .container{
+                      max-width:756px;
+                    }
+                    @media all and (min-width:756px){
+                        .container{
+                        margin-left:calc(50% - 378px)
+                        }
+                        .nav-display{
+                        left:calc(378px - 270px)
+                        }
+                    }
+                    .cookie-prompt-pop{
+                       width:280px;position: fixed;height:150px;
+                       left:calc(50% - 140px);top:calc(50% - 75px);
+                       font-weight:900;font-size: 17px;font-family: newfont2;
+                       line-height:1.6;transition:0.25s;
+                       transform: scale(1);
+                    }
+                    .cookie-prompt-pop>p{
+                    background: white;color:black;padding: 1em 0.5em;
+                    border-radius: 5px;margin: 0;
+                    
+                    }
+                     .cookie-prompt-pop>div {
+                       text-align:center;background: rgb(30,30,30);
+                       padding:1em 0;border-radius: 0 0 5px 5px;
+                     }
+                      .cookie-prompt-pop>div>button {
+                          border: none;padding: 0.4em 1.8em;font-size: 19px;
+                          margin:0 0.6em;border-radius: 5px;font-family: newfont2;
+                          box-shadow :inset 0px -3px 1px rgba(0,0,0,0.4);   
+                          outline: none;  
+                      }
+                      .cookie-prompt-pop>div>button:nth-of-type(2){
+                         background: teal;color:white;
+                      }
+                      .cookie-main-div{
+                      position:fixed;top:0;left:0;width:100%;height:100%;transition:0.25s;
+                      background: rgba(0,0,0,0.6);z-index:100;transform:scale(0);
+                      }
+                      
+                      .welcome{
+                          text-align:center;text-transform:uppercase;
+                          font-family: newfont2;font-size:130%;width:auto;
+                          height:90vh;
+                          padding: 0.5 1em;opacity: 0.25;
+                          animation: 5s infinite ease-in-out pass1;
+                      }
+                      .welcome>h1,.welcome>h2{
+                      flex:none;width:100%;
+                      
+                      }
+                    .whole{
+                    width:100vw;
+                    height:100vh;
+                    position:fixed;
+                    top:0;z-index:1000;
+                    left:0;
+                    display: flex;
+                    align-items:center;
+                    justify-content:center;
+                    background: black !important;
+                    }
+                    .slice-ring{
+                    position:relative;
+                    }
+                    .slice-ring>div:nth-of-type(1) {
+                    position:relative;
+                    border-radius:50%;
+                    width:40px;
+                    height:40px;
+                    border:3px solid transparent;
+                    border-left:3px solid red;
+                    border-right:3px solid orange;
+                    animation:2s linear infinite slice-ring;
+                    }
+                    .slice-ring>div:nth-of-type(2){
+                    Position: absolute;
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background: rgb(240,180,170);
+                    top:calc(50% - 5px);
+                    left: calc(50% - 5px);
+                    animation:1s linear infinite slice-ring2;
+                    
+                    }
+                    @keyframes slice-ring2{
+                    0%{transform:translateX(0)}
+                    10%{transform:translateX(13px);}
+                    75%{transform:translateX(-13px);}
+                    100%{transform:translateX(0px);}
+                    }
+                    @keyframes slice-ring{
+                    0%{transform:rotateZ(0)}
+                    100%{transform:rotateZ(360deg)}
+                    }
+                    sub,sup{
+                    font-size:12px !important;
+                    }
+           </style>
+           
+        <html>
+        
+        <div class="whole">
+        <div class="slice-ring">
+        <div></div>
+        <div></div>
+        </div>
+        </div>
+           <body>
+             
+                <div class="container">
+                
+                <div class="cookie-main-div">
+                   <div class="cookie-prompt-pop">
+                     <p>
+                      Do you want to use <span style="color:teal">60coins</span> to reveal the correct answer
+                     </p>
+                     <div>
+                       <button id="no">NO</button>
+                       <button id="yes">YES</button>
+                     </div>
+                   </div>
+                  </div><!--end of cookie main div pop container</div-->
+                    <div>
+                       <div class="nav-display">
+                          <h3>Other Section</h3>
+                          <span  id="science"><img src="science.jpeg" class="icon-img">Science</span>
+                           <span  id="sport"><img src="sport.png"class="icon-img">Sport</span>
+                            <span id="maths"><img src="math.jpeg" class="icon-img">mathematics</span>
+                             <span id="agric"><img src="nature.jpeg" class="icon-img">Agriculture</span>
+                       </div>
+                    
+                        <div class="main-score-div">
+                        <div class="pop-div-score">
+                        <i class="cancle-pop">x</i>
+                        <h2>Your Score</h2>
+                            <span class="pop-ans"><i>0</i></span>
+                            :<span class="pop-total"><i>0</i></span>
+                            <div class="trophy" style="width: 100%;text-align:center"><img src="trophy.png" id="trophy"></div>
+                             <b class="comment">very poor</b>
+                        </div>
+                      </div>
+                        <!--end of score div-->
+                    </div>
+                   <nav></nav>
+                   
+                   
+                
+                   <div class="flex nav-bar">
+                   <b class="topic">Az Quiz</b>
+                   <div class="img"><img src="" alt=""></div>
+                   <div class="nav-icon-div"><span class="nav-icon"><i></i><i></i></span></div>
+               
+                   </div>
+                   <div class=" welcome">
+                   <h1>Welcome</h1>
+                   <h2>To</h2>
+                   <h1>Az Quiz</h1>
+                   <h2>Navigate to nav-bar to start</h2>
+                   </div>
+                 <div class="show relative">
+                 <div class="cookie"><span><b></b><br>
+                 <img src="coin.png" class="coin"></span></div>
+                 
+                   <div class="object-display"> 
+                   <div class="score">
+                       <span class="ans-question"><i>0</i></span>
+                       <span class="score-question"><i>0</i></span>
+                   </div>
+            
+                <div class="question-div"><p id="question-text"></p></div>
+                <span  class="ans-contain"><input class="radio" type="radio" name="ans"></input>
+                <span class="radio-title"></span></span>
+                <span class="ans-contain"><input class="radio" type="radio" name="ans"></input>
+               <span class="radio-title"></span> </span>
+                <span class="ans-contain"><input class="radio" type="radio" name="ans"></input>
+                <span class="radio-title"></span></span>
+                  
+               </div>
+                  <button id="answer" disabled>Answer
+                  <span class="no-opt">Oops no option clicked. click to proceed</span>
+                   <img src="coin.png" class="pop-coin">
+                  </button>
+                  <button id="next"></button>
+                </div>
+           </div>
+            </body>
+        </html>
+       </Doctype>
+  <script>
+      let navArr=[...document.querySelector(".nav-icon").childNodes].concat([...document.querySelector(".nav-display").childNodes]).concat([...document.querySelector(".nav-icon-div").childNodes])
+      
+        document.querySelector("body").onclick=function(e){
+            if(navArr.indexOf(e.target)===-1){
+               document.querySelector(".nav-display").style.top="-120%"
+            }
+        }
+  
+  
+       //to remove roler off the screen 
+       window.onload=function(){
+       document.querySelector(".whole").style.display="none";
+       }
+  
+       let rax=["rat","tary","cast","hat"];
+       localStorage.setItem("date",JSON.stringify(rax))
+  
+      
+  
+          /*async function loadQuestion(question){
+          var response = await fetch(question)
+          var question =  await response.json()
+          alert(question);
+             }
+          
+          loadQuestion("agric-ajax.json")
+            */
+            
+            //seting of cookie an coins gotten
+            function deleteCookie(cname,cscore){
+            if(cscore==undefined){
+            document.cookie = cname+"="+cscore+"; expires=Thu, 18 Dec 1935 12:00:00 UTC; path=/";
+               return document.cookie}
+               }
+            function setCookie(cname,cscore){
+             document.cookie = cname+"="+cscore+";expires=Thu, 18 Dec 30000 12:00:00 UTC; path=/";
+            return document.cookie.substring(cname.length+1,1000)
+            }
+            deleteCookie("TRACKID");
+            let scoreCookie=document.cookie.substring(6,1000);
+            document.querySelector(".cookie>span>b").innerHTML=scoreCookie;
+                  if(scoreCookie==""){
+                      cookieValue=60;
+                  }
+                  else{
+                      cookieValue=Number(scoreCookie);
+                  }
+                  
+            
+            
+          
+              //assinging of variables
+              let ansButError= document.querySelector("#answer>span");
+              let next=document.querySelector("#next");
+              let comment=document.querySelector(".comment");
+              let popDiv=document.querySelector(".main-score-div");
+          const questionText=document.querySelector("#question-text");
+        const topic =document.querySelector(".topic");
+       const radio=document.querySelectorAll(".radio");
+    const ansBut= document.querySelector("#answer");
+    let navIcon=document.querySelector(".nav-icon");
+    let navIconLine=document.querySelectorAll(".nav-icon>i");
+    let ansContain=document.querySelectorAll(".ans-contain");
+    let loadQuestion=document.querySelectorAll(".load-question");
+    let ansQuestion=document.querySelector(".score-question>i");
+    let scoreQuestion=document.querySelector(".ans-question>i");
+    let popAns=document.querySelector(".pop-ans>i");
+    let popTotal=document.querySelector(".pop-total>i");
+    let cookie=document.querySelector(".cookie");
+    let cookiePop=document.querySelector(".cookie-main-div");
+    ansButCheck=false;let questionLoads;
+    
+      function storeCount(){
+     if(localStorage.getItem("mathcookie")!==null){
+     boxStore=Number(localStorage.getItem("mathcookie"));
+     boxStore++;
+        localStorage.setItem("mathcookie",boxStore);
+        
+        if(boxStore>questionLoads.question.length-1){
+        localStorage.setItem("mathcookie",0);
+        boxStore=Number(localStorage.getItem("mathcookie"));
+        }
+       
+       }
+       else{
+       localStorage.setItem("mathcookie",0)
+       }
+        return boxStore;
+      }
+    
+   
+   
+    let navDisplay=document.querySelector(".nav-display");
+    const radioTitle=document.querySelectorAll(".radio-title");
+        let count=0;
+        let score=0;let rand,cookieAns;
+         let randArr=[];
+        function setItStore(){
+        localStorage.setItem("AzudiMainCookieName001",0)
+        }
+        //cookie clicked to display pop coin 
+           cookie.onclick=function (){
+              cookiePop.style.transform="scale(1)"
+           }
+           //for pop up cookie display no button
+        document.querySelector("#no").onclick=function (){
+               cookiePop.style.transform="scale(0)"
+               cookiePop.children[0].children[1].children[1].style.display="inline-block"
+               cookiePop.children[0].children[1].children[0].innerHTML="NO"
+               
+        }
+        
+        
+           //adding event listerner to different checkbox title
+           for(let i=0;i<radioTitle.length;i++){
+         radioTitle[i].onclick=function(e){
+           if(e.target.className==="radio-title"){
+              for(let p=0;p<radioTitle.length;p++){
+                 radioTitle[p].style.backgroundColor="rgb(29,9,166)"
+              }
+             e.target.parentElement.children[0].checked=true;
+             e.target.style.backgroundColor="rgb(59,39,206)"
+             ansButError.style.display="none";
+            }
+         }}
+         
+         document.querySelector(".show").style.display="none";
+         //end of for loop
+         
+         let onceSet=true;
+         
+        function ajaxLoad(ajax){
+        document.querySelector(".whole").style.display="flex";
+         count=0;
+         score=0;
+         
+         //cookie once load function
+         let local=localStorage.getItem("AzudiMainCookieName001");
+           if(isNaN(local)){
+           setItStore();
+              alert("Can play the game now");
+           }
+           scoreQuestion.innerHTML="0";
+           ansQuestion.innerHTML="0";
+           
+           document.querySelector(".show").style.display="block";
+           popAns.innerHTML="0";
+           popTotal.innerHTML="0";
+           
+           //begining of ajax loading for questions
+            let call=new XMLHttpRequest()
+               //on load of ajax content to diaplay on screen
+              call.onreadystatechange = function (){
+              if(call.readyState == 4) {
+                  let questionLoad=JSON.parse(call.responseText);
+                  questionLoads=questionLoad;
+                   document.querySelector(".whole").style.display="none";
+                   for(let i=0;i<questionLoad.question.length;i++){
+                   randArr[i]=i;
+                   }
+                   let rand=storeCount();
+                     
+                     	
+                      
+                      //function for options and text of the questions being lopped to return to default
+                       function coded(){
+                    for(let i=0;i<radioTitle.length;i++){
+                         radioTitle[i].style.backgroundColor="rgba(29,9,166,0.8)";
+                         radio[i].checked=false;
+                    }
+                    ansBut.disabled=false;
+                         port=questionLoad.question.sort()[rand];
+                         //alert(questionLoad.question.sort().length);
+                      topic.innerHTML=questionLoad.name;
+                      radioTitle[0].innerHTML=port.opt1;
+                      radioTitle[1].innerHTML=port.opt2;
+                      radioTitle[2].innerHTML=port.opt3;
+                      questionText.innerHTML=port.question;
+                   
+                    }
+                       coded();
+                       
+                       //set-time out for question load and checking correct answer 
+                      cookieAns=questionLoad.question[rand].sol;
+                         //for pop up cookie display yes button
+                         document.querySelector("#yes").onclick=function (){
+                         
+                            if(cookieValue>=60){
+                            for(let p=0;p<ansContain.length;p++){
+                               if(cookieAns===ansContain[p].children[1].innerHTML){
+                                    ansContain[p].children[1].style.backgroundColor="teal";
+                               ansContain[p].children[0].checked=true;
+                                deleteCookie("TRACKID");
+                                cookieValue = Number(cookieValue)-60;
+                             
+                                setCookie("score",cookieValue);
+                               
+                               document.querySelector(".cookie>span>b").innerHTML=coinCookie;
+                                  cookiePop.style.display="none"
+                               }
+                             else{
+                             cookiePop.children[0].children[0].innerHTML="Oops your coin is not sufficient to purchase an answer";
+                               cookiePop.children[0].children[1].children[1].style.display="none"
+                             cookiePop.children[0].children[1].children[0].innerHTML="cancle"
+                             }
+                            }
+                            }
+                         }
+                      ansBut.onclick=function (){
+                      function checkCount(){
+                         for(let i=0;i<radio.length;i++){
+                            if(radio[i].checked){
+                              if(radio[i].parentElement.children[1].innerHTML===questionLoad.question[rand].sol){
+                                  score++;
+                                  
+                                  radio[i].parentElement.children[1].style.backgroundColor="teal";
+                                 document.querySelector(".pop-coin").style.display="block";
+                                setTimeout(
+                                  function (){
+                                     document.querySelector(".pop-coin").style.display="none";
+                                     //setting cookie
+                                     
+                                     deleteCookie("TRACKID");
+                                     cookieValue+=4;
+                                     let getCookie=setCookie("score",cookieValue);
+                                     document.querySelector(".cookie>span>b").innerHTML=getCookie;
+                                     //end of setting cookie
+                                  },500
+                                )
+                              }
+                              else{
+                                 radio[i].parentElement.children[1].style.backgroundColor="rgb(233,24,35)"
+                                 
+                              }
+                              ansButError.style.display="none"
+                              //set timeout after being checked function code
+                              setTimeout(
+                              function (){
+                              ansBut.disabled=false;
+                                randArr.slice(rand,1);
+                              rand=storeCount();
+                                 console.log(rand,randArr);
+                              
+                              coded();
+                              },500
+                              )
+                               count++;
+                               if(count==10){
+                               popAns.innerHTML=0;
+                               popTotal.innerHTML=0;
+                               }
+                                    
+                            }//end of if check box is checked
+                             
+                         }
+                       
+                            if(radio[0].checked || radio[1].checked || radio[2].checked){
+                               ansButError.style.display="none";
+                            }
+                            else{
+                            ansButError.style.display="block";
+                            for(let i=0;i<radioTitle.length;i++){
+                            radioTitle[i].parentElement.onclick=function (){
+                               ansBut.disabled=false;
+                            }
+                            }
+                            }
+                         ansQuestion.innerHTML=count;
+                         scoreQuestion.innerHTML=score;
+                         
+                         //nav display after count reach 10
+                         if(count==10){
+                         popAns.innerHTML=score;
+                         popTotal.innerHTML=count;
+                           
+                              if(score<=0 && score<4){
+                                comment.innerHTML="Very poor";
+                                document.querySelector(".trophy").style.display="none";
+                              }
+                              else if(score>=4 && score<6){
+                              comment.innerHTML="Good";
+                              document.querySelector(".trophy").style.display="none";
+                              }
+                              else if(score>=6 && score<=8){
+                              comment.innerHTML="Excellent";
+                              document.querySelector(".trophy").style.display="none";
+                              }
+                              else if(score>8 && score<=10){
+                              comment.innerHTML="Brain buster";
+                              document.querySelector(".trophy").style.display="block";
+                              }
+                              score=0
+                              count=0;
+                              popDiv.style.top="0";
+                              ansQuestion.innerHTML=0;
+                              scoreQuestion.innerHTML=0;
+                              
+                         }
+                         
+                         
+                         }//end of check count
+                         checkCount();
+                      ansBut.disabled=true;
+                     }//end of ansBut(answer button) click
+                    
+                }
+              };
+               call.open("GET",ajax,true);
+                call.send();//end of ajax call
+        };
+        //side menu children adding event listerner onclick
+      document.querySelector("#science").onclick=function(){
+      ajaxLoad("science-ajax.json")};
+            document.querySelector("#sport").onclick=function(){
+            ajaxLoad("sport-ajax.json")};
+               document.querySelector("#agric").onclick=function(){
+               ajaxLoad("agric-ajax.json")};
+               document.querySelector("#maths").onclick=function(){
+               ajaxLoad("math-ajax.json")};
+               //ajax load by on click end
+          document.querySelector(".cancle-pop").onclick=()=>
+       document.querySelector(".main-score-div").style.top="-110%";
+          
+          //fixed nav display codes
+          let click=true
+          navIcon.onclick=function (){
+            if(click){
+            document.querySelector(".welcome").style.display="none";
+            navDisplay.style.top="0";
+            navIconLine[0].style.cssText="margin-left:10px;transform:rotateZ(45deg) translateY(12px) translateX(5px);width: 40px";
+            navIconLine[1].style.cssText="transform:rotateZ(-45deg) translateX(0px) translateY(7px)";
+            
+            }
+            else{
+            navDisplay.style.top="-120%";
+            navIconLine[0].style.cssText="margin-left:0;transform:rotateZ(0deg) translateY(0px) translateX(0px);width:50px";
+            navIconLine[1].style.cssText="transform:rotateZ(0deg) translateX(0px) translateY(0);";
+            
+            }
+            click=!click;
+          }
+       
+  </script>

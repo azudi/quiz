@@ -1,0 +1,413 @@
+
+  {
+    "name":"Science Section",
+    "question":[
+        {
+          "sol":"ear",
+          "opt1":"nose",
+          "opt2":"ear",
+          "opt3":"leg",
+          "question":"On what part of the body would you find pinna?"
+        },
+        {
+        "sol":"tendon",
+        "opt1":"tendon",
+        "opt2":"ligament",
+        "opt3":"socket",
+        "question":"What tissue connect muscle to the bones?"
+        },
+        {
+        "sol":"206",
+        "opt1":"205",
+        "opt2":"206",
+        "opt3":"207",
+        "question":"How many bones has a human body"
+        },
+        {
+        "sol":"third law",
+        "opt1":"first law",
+        "opt2":"second law",
+        "opt3":"third law",
+        "question":"Which of newtons law states that 'for every action there is an equal reaction'"
+        },
+        {
+        "sol":"true",
+        "opt1":"false",
+        "opt2":"true",
+        "opt3":"both",
+        "question":"Lightning is hotter than sun"
+        },
+        {
+        "sol":"115 days",
+        "opt1":"115 days",
+        "opt2":"127 days",
+        "opt3":"108 days",
+        "question":"How long does a human red blood cell survive"
+        },
+        {
+        "sol":"118",
+        "opt1":"116",
+        "opt2":"120",
+        "opt3":"118",
+        "question":"How many element are there in the periodic table"
+        },
+        {
+        "sol":"3",
+        "opt1":"4",
+        "opt2":"5",
+        "opt3":"3",
+        "question":"How many heart does an octopus have"
+        },
+        {
+        "sol":"vatican city",
+        "opt1":"hungary",
+        "opt2":"vatican city",
+        "opt3":"mexico",
+        "question":"What is the smalest country in the world"
+        },
+        {
+        "sol":"radiation",
+        "opt1":"resistance",
+        "opt2":"frequency",
+        "opt3":"radiation",
+        "question":"What is geiher counter use to measure"
+        },
+        {
+        "sol":"potential energy",
+        "opt1":"potential energy",
+        "opt2":"kinetic energy",
+        "opt3":"kinematic energy",
+        "question":"An unlit match has what form of energy"
+        },
+        {
+        "sol":"covalent",
+        "opt1":"electrovalent",
+        "opt2":"covalent",
+        "opt3":"hydrogen",
+        "question":"What type of bond, requires sharing of electron pairs between different molecules"
+        },
+        {
+        "sol":"light",
+        "opt1":"sound",
+        "opt2":"light",
+        "opt3":"heat",
+        "question":"optics is the study of "
+        },
+        {
+        "sol":"nevada",
+        "opt1":"nevada",
+        "opt2":"las-vagas",
+        "opt3":"callifornia",
+        "question":"In 1953, USA conducted its first artillery test where was it held"
+        },
+        {
+        "sol":"electromagnetism",
+        "opt1":"lead-acid battery",
+        "opt2":"electromagnetism",
+        "opt3":"potentiometer",
+        "question":"Joseph henry was given credit for his invention in 1831, what was th invention"
+        },
+        {
+        "sol":"copper and tin",
+        "opt1":"copper and tin",
+        "opt2":"tin and alluminium",
+        "opt3":"copper and zinc",
+        "question":"What two substance are the component of bronze"
+        },
+        {
+        "sol":"sublimation",
+        "opt1":"evaporation",
+        "opt2":"condensation",
+        "opt3":"sublimation",
+        "question":"When a solid matter immediately transits to gas is known as"
+        },
+        {
+        "sol":"density",
+        "opt1":"visvousity",
+        "opt2":"boyancy",
+        "opt3":"density",
+        "question":"What quality of an object that allows it to float on water"
+        },
+        {
+        "sol":"normal",
+        "opt1":"normal",
+        "opt2":"weight",
+        "opt3":"area",
+        "question":"Friction is a force which is directly proportional to"
+        },
+        {
+        "sol":"0.625",
+        "opt1":"0.728",
+        "opt2":"0.463",
+        "opt3":"0.625",
+        "question":"what is the coefficient of frictional force of 2.5N and normal of 4N"
+        },
+        {
+        "sol":"negative",
+        "opt1":"negative",
+        "opt2":"positive",
+        "opt3":"neutral",
+        "question":"Ebonite rod gains what charge when rub against fur"
+        },
+        {
+        "sol":"surface tension",
+        "opt1":"surface tension",
+        "opt2":"cohesion",
+        "opt3":"friction",
+        "question":"Free surface of a liquid tends to contract to the smallest possible area due to force of "
+        },
+        {
+        "sol":"decrease",
+        "opt1":"increase",
+        "opt2":"unchange",
+        "opt3":"decrease",
+        "question":"The rise of liquid in a tube due to surface tension will increase in size of tube will?"
+        },
+        {
+        "sol":"unsteady",
+        "opt1":"steady",
+        "opt2":"unsteady",
+        "opt3":"laminar",
+        "question":"During the opening of a valve in a pipeline, the flow is"
+        },
+        {
+        "sol":"greater than 4",
+        "opt1":"unity",
+        "opt2":"greater than 2",
+        "opt3":"greater than 4",
+        "question":"For hypersonic flow the, mach number is ?"
+        },
+        {
+        "sol":"less than 4000",
+        "opt1":"less than 2000",
+        "opt2":"more than 4000",
+        "opt3":"less than 4000",
+        "question":"For pipes, laminar flow occurs when reynolds numbet is ?"
+        },
+        {
+        "sol":"all of the above",
+        "opt1":"venturimeter",
+        "opt2":"orifice place",
+        "opt3":"all of the above",
+        "question":"Which instrument is used to measure flow on the application of bernoulli's thoerem"
+        },
+        {
+        "sol":"countinuty equation",
+        "opt1":"pascal law",
+        "opt2":"boundary layer theory",
+        "opt3":"countinuty equation",
+        "question":"An ideal flow of any fluid must satisfy"
+        },
+        {
+        "sol":"photon",
+        "opt1":"light",
+        "opt2":"waves",
+        "opt3":"photon",
+        "question":"What does an electron emmits when it moves to lower energy level"
+        },
+        {
+        "sol":"hysteresis loss",
+        "opt1":"eddy current",
+        "opt2":"hysteresis loss",
+        "opt3":"heat loss",
+        "question":"Wasted energy due to reversing the magnetization of core"
+        },
+        {
+        "sol":"density",
+        "opt1":"density",
+        "opt2":"viscousity",
+        "opt3":"volume",
+        "question":"Pressure in different liquids at the same depth varies directly with"
+        },
+        {
+        "sol":"both",
+        "opt1":"tone",
+        "opt2":"musical note",
+        "opt3":"both",
+        "question":"Sound of regular frequency is called"
+        },
+        {
+        "sol":"hard surface",
+        "opt1":"hard surface",
+        "opt2":"smooth surface",
+        "opt3":"black surface",
+        "question":"Echoes are produced when sound waves are reflected by"
+        },
+        {
+        "sol":"resonance",
+        "opt1":"forced vibration",
+        "opt2":"resonance",
+        "opt3":"echo",
+        "question":"When a body oscillates at its own natural frequency is called"
+        },
+        {
+        "sol":"pitch",
+        "opt1":"pitch",
+        "opt2":"note",
+        "opt3":"tune",
+        "question":"Position of musical note is called"
+        },
+        {
+        "sol":"Binocular vision",
+        "opt1":"Binocular vision",
+        "opt2":"persistence",
+        "opt3":"near point",
+        "question":"The overlapping of two images formed by both eyes is known as"
+        },
+        {
+        "sol":"refraction",
+        "opt1":"refraction",
+        "opt2":"reflection",
+        "opt3":"index",
+        "question":"The bending of light ray as it crosses from one boundary to another is"
+        },
+        {
+        "sol":"barometer",
+        "opt1":"thermometer",
+        "opt2":"barometer",
+        "opt3":"hydrometer",
+        "question":"Instrument used in measuring the atmosphere pressure is"
+        },
+        {
+        "sol":"boiling",
+        "opt1":"evaporation",
+        "opt2":"boiling",
+        "opt3":"condensation",
+        "question":"The temperature at which its S.V.P is equal to the atmospheric pressure is"
+        },
+        {
+        "sol":"966.70mmHg",
+        "opt1":"980.50mmHg",
+        "opt2":"966.70mmHg",
+        "opt3":"968.30mmHg",
+        "question":"A gas occupies a volume 250cm³ at 580mmHg if volume changes to 150cm³ find the pressure"
+        },
+        {
+        "sol":"181.40cm³",
+        "opt1":"178.50cm³",
+        "opt2":"190.30cm³",
+        "opt3":"181.40cm³",
+        "question":"Mass of gas occupies 200m³ at 20°c and 740mmHg pressure. find the volume"
+        },
+        {
+        "sol":"neutraliation",
+        "opt1":"mixture",
+        "opt2":"neutraliation",
+        "opt3":"ionization",
+        "question":"Reaction of acid and base to form salt and water is called "
+        },
+        {
+        "sol":"pignite",
+        "opt1":"lignite",
+        "opt2":"pignite",
+        "opt3":"anthracite",
+        "question":"Which of these is not a type of coal"
+        },
+        {
+        "sol":"eqiulibrium",
+        "opt1":"eqiulibrium",
+        "opt2":"precipitation",
+        "opt3":"saturation",
+        "question":"Le chatelier's principle govern system in "
+        },
+        {
+        "sol":"pignite",
+        "opt1":"lignite",
+        "opt2":"pignite",
+        "opt3":"anthracite",
+        "question":"Which of these is not a type of coal"
+        },
+        {
+        "sol":"precipitation",
+        "opt1":"precipitation",
+        "opt2":"hydrolysis",
+        "opt3":"solubility",
+        "question":"When ionic product is greater than solubility product what will occur"
+        },
+        {
+        "sol":"hess",
+        "opt1":"gibb's",
+        "opt2":"hess",
+        "opt3":"faraday",
+        "question":"The heat changes of a reaction is independent of route of the reaction is what law"
+        },
+        {
+        "sol":"entropy",
+        "opt1":"entropy",
+        "opt2":"enthalpy",
+        "opt3":"free energy",
+        "question":"The measure of the degree of disorder in a system is"
+        },
+        {
+        "sol":"∆G=-nFE",
+        "opt1":"∆G=-RTlnK",
+        "opt2":"∆G=-nFE",
+        "opt3":"∆G=q+w",
+        "question":"The free energy change under standard conditions and the cell potential are related by"
+        },
+        {
+        "sol":"dialysis",
+        "opt1":"osmosis",
+        "opt2":"precipitation",
+        "opt3":"dialysis",
+        "question":"The process use to seperate a mixture of a true solution and a colliod "
+        },
+        {
+        "sol":"entropy",
+        "opt1":"entropy",
+        "opt2":"enthalpy",
+        "opt3":"free energy",
+        "question":"The measure of the degree of disorder in a system is"
+        },
+        {
+        "sol":"21%",
+        "opt1":"21%",
+        "opt2":"22%",
+        "opt3":"23%",
+        "question":"Atmosphere is made up of how many percent oxygen"
+        },
+        {
+        "sol":"spectroscopic",
+        "opt1":"photolitic",
+        "opt2":"biometric",
+        "opt3":"spectroscopic",
+        "question":"Technique used to study the chemical composition of a planet is"
+        },
+        {
+        "sol":"hydrogen",
+        "opt1":"covalent",
+        "opt2":"hydrogen",
+        "opt3":"dative covalent",
+        "question":"protein contains what type of bond"
+        },
+        {
+        "sol":"hydrogen",
+        "opt1":"hydrogen",
+        "opt2":"vander waal's",
+        "opt3":"electrovalent",
+        "question":"The fact that water is liquid at 0°c is due to which bond"
+        },
+        {
+        "sol":"linear",
+        "opt1":"linear",
+        "opt2":"angular",
+        "opt3":"tetrahedral",
+        "question":"The shape of carbon(iv)oxide is"
+        },
+        {
+        "sol":"angular",
+        "opt1":"linear",
+        "opt2":"angular",
+        "opt3":"planar",
+        "question":"shape of water molecule is "
+        },
+        {
+        "sol":"metallic",
+        "opt1":"ionic",
+        "opt2":"hydrogen",
+        "opt3":"metallic",
+        "question":"Which bond result from the electrostatic attraction between the loosely held valence electron"
+        }
+     
+    ]
+}

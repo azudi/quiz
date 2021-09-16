@@ -1,0 +1,409 @@
+<meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="Font-face/font-face.css">
+      <Doctype html>
+          <style>
+              body{color:rgb(230,230,230) !important;padding:0;margin:0;
+                  font-family: nexabold Arial, Helvetica, sans-serif ;
+                  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("pics/bk.jpg");
+                  background-size:cover;
+               
+              
+              }
+             .topic{
+                 font-size:1.8em;font-family: Arial, Helvetica, sans-serif;
+                 text-transform: capitalize;font-weight:900;
+                 background: rgb(69, 35, 219);padding:0.85em;
+                 color:rgb(79,45,229);text-shadow:-2px 2px 1px rgba(39,15,99,0.7);
+                 font-family: nexabold
+             }
+             .ans-contain{
+                 display:block;padding-left:1em;font-weight: 600;
+                 margin: 1em 0;font-family :nexabold;
+             }
+             .ans-contain>span{transition: 0.25s;padding-left:1em;
+                 font-size:1.3em;color:rgb(230,230,230);font-style:italic;
+             
+             }
+             #answer{
+                 background: teal;padding:0.6em 1em;border:none;width: 100px;
+                 font-weight: 600;color:rgb(230,230,230);border-radius: 50px;
+                 margin-top:1.5em;font-size: 1.1em;outline:none;margin-left:0.35em;
+                 font-family: nexabold;
+             }
+             input[type=radio]{
+                 transform:scale(2);-webkit-appearance:none;display: inline-block;
+                 width:13px;height:13px;border:1px solid rgba(69,35,219);outline:none;
+                 background: rgba(69,35,219,0.5);border-radius:50%;position:relative;
+                 overflow:hidden;
+             }
+             input[type="radio"]::before{
+                content:"";width:70%;height:70%;border-radius: inherit;transition:0.3s;
+                background: rgb(109,85,220);top:-100%;left:-30%;position:absolute;
+             }
+             .radio:checked::before{
+             left:15%;top:15%;
+             }
+             #next{
+                 background: rgb(69, 35, 219);padding:0.5em 2em;
+                 border:none;width:150px;
+                 font-weight: 600;color:rgb(230,230,230);outline:none;
+                 margin:1.5em 0 0.8em 0;font-size:1.3em;border-radius: 50px;
+                 background: linear-gradient(to bottom,rgb(88, 65, 190) ,rgb(28, 10, 109) );
+                 margin-left:calc(50% - 100px);font-family: nexabold;
+                
+             }
+             #ans-hide{display:none}
+             #question-text{
+                 font-size:1.5em;background: rgba(40,40,40,1);border: 5px;
+                 font-weight: 600;color:rgb(230,230,230);padding: 1em 0.5em;
+                 word-spacing:3px;line-height:1.5;font-family: nexabold;
+             }
+             .score>span{
+                 display:inline-block;width:47%;padding: 1%;
+                 position:relative;z-index:4;
+             }
+             
+             .score>span>i{
+             display:inline-flex;width:60px;height:60px;background: rgb(69, 35, 219);
+             font-weight: 600;font-size:1.5em;border-radius:50%;
+             position:relative;font-style:normal;justify-content:center;align-items:center; 
+             box-shadow :inset 3px 3px 5px rgba(0,0,0,0.4);font-family: nexabold;
+             color:rgb(89,55,245);text-shadow:-2px 2px 1px rgba(39,15,99,0.7);
+             }
+             .score>span:nth-of-type(2){
+                 text-align: right;
+             }
+             .score>span>i::before{
+             content:"";position:absolute;height:50px;width:10px;border-radius:50px;
+             top:-40px;left:calc(50% - 5px);background: inherit;z-index:-1;
+             }
+             .main-score-div{
+             width:100vw;height:100vh;position:fixed;top:-100%;left:0;
+             background: rgba(0,0,0,0.7);z-index:15;transition:0.4s;
+             }
+             .pop-div-score{
+                 position:absolute;width:300px;left:calc(50% - 150px);
+                 top:10%;transition: 0.55s;
+                 background: radial-gradient(at top left,rgb(88, 65, 190) ,rgb(29, 9, 116) );
+                 border-radius: 5px;position:relative;
+                 z-index: 10;text-align: center;
+                 padding:1em 0.4em;font-family: nexabold;
+             }
+              .pop-div-score::before{
+                   content:"";position:absolute;height:100%;width:10px;border-radius:50px;
+                   top:-90%;left:calc(50% - 5px);background: inherit;z-index:-1;
+              }
+             .pop-div-score>h2{
+                 font-weight: 800;
+             }
+             .pop-div-score>span{
+                 display:inline-block;padding:0.57em 0;color:rgba(230,230,230,0.7);
+                 width:50px;text-align: center;font-size:1.2em;
+             }.pop-div-score>b{
+                 font-family: nexabold;font-size:1.3em;
+                display:block;padding:0.57em 0.25em;color:rgb(79,45,219);
+                text-shadow:-2px 2px 1px rgba(39,15,99,0.7);
+             }
+             .cancle-pop{
+                 position:absolute;display:inline-flex;box-shadow: 0 0 6px rgba(0,0,0,0.3);
+                 width:70px;height:70px;top:calc(100% - 55px);left:calc(100% - 55px);border-radius: 50%;
+                 justify-content:center;align-items:center;font-weight:900;font-size: 1.3em;
+             }
+             .flex{
+            display: flex;align-items: center;
+             }
+             .nav-bar{
+             margin:0;padding:0; background: rgb(69, 35, 219);width:100%;
+            
+             }
+             .nav-bar>b{
+             width: 70% ;margin: 0;display: inline-block;
+             }
+             .nav-bar>.img{z-index:1000;
+             width: 10%;margin: 0;display: inline-block;
+             }
+             .nav-bar>.nav-icon-div{z-index:1000;
+             width: 20%;display: inline-block;
+             }
+             .nav-icon{
+                width:40px;height:40px;
+             }
+             .nav-icon>i:nth-of-type(1){
+                 width:50%;height:3px;background: rgba(230,230,230,0.4);display:inline-block;
+                 border-radius: 50px;margin-left:25%;margin:0.25em 0;transition:0.4s;
+             }
+             .nav-icon>i:nth-of-type(2){
+             width:50%;height:3px;background: rgba(230,230,230,0.7);display:inline-block;
+             border-radius: 50px;margin-left:25%;transition:0.3s;
+             }
+             .nav-display{
+             position: fixed;top:0;left:-100%;width:230px;height:100vh;background: black;
+             transition:0.45s;z-index:100;
+             background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("pics/bk.jpg");
+             background-size:cover;
+             }
+             .nav-display>h3{
+              padding:0.7em 0.4em;background: rgb(69,35,219);margin:0;margin-bottom:1em;
+              font-family: nexabold;
+              border-radius: 0px;
+             }
+             .nav-display>span{
+             display: block;font-size:1.2em;padding:0.6em 0.2em;font-family: nexabold;
+             border-bottom: 2px solid rgba(100,100,100,0.3);margin:0 0.8em;margin-left:0.3em;
+             }
+             .icon-img{
+             width:25px;height:25px;object-fit:cover;
+             border-radius: 50%;vertical-align:middle;
+             margin-right: 0.3em;
+             }
+          </style>
+          
+       <html>
+           <body>
+               <div>
+                   <div>
+                      <div class="nav-display">
+                         <h3>Other Section</h3>
+                         <span id="science"><img src="pics/science.jpeg" class="icon-img">Science</span>
+                          <span id="sport"><img class="icon-img">Sport</span>
+                           <span id="maths"><img src="pics/math.jpeg" class="icon-img">mathematics</span>
+                            <span id="nature"><img src="pics/nature.jpeg" class="icon-img">Nature</span>
+                      </div>
+                   
+                   
+                   
+                       <div class="main-score-div">
+                       <div class="pop-div-score">
+                       <i class="cancle-pop">x</i>
+                       <h2>Your Score</h2>
+                           <span class="pop-ans"><i>0</i></span>
+                           :<span class="pop-total"><i>0</i></span>
+                            <b class="comment">very poor</b>
+                       </div>
+                     </div>
+                       <!--end of score div-->
+                   </div>
+                  <nav></nav>
+                  
+                  <div class="flex nav-bar">
+                  <b class="topic"></b>
+                  <div class="img"><img src="" alt=""></div>
+                  <div class="nav-icon-div"><span class="nav-icon"><i></i><i></i></span></div>
+                  </div>
+                  <div class="object-display"> 
+                  <div class="score">
+                      <span class="ans-question"><i>0</i></span>
+                      <span class="score-question"><i>0</i></span>
+                  </div>
+           
+               <p id="question-text"></p>
+               <span class="ans-contain"><input class="radio" type="radio" name="ans"></input>
+               <span class="radio-title"></span></span>
+               <span class="ans-contain"><input class="radio" type="radio" name="ans"></input>
+              <span class="radio-title"></span> </span>
+               <span class="ans-contain"><input class="radio" type="radio" name="ans"></input>
+               <span class="radio-title"></span></span>
+                 
+              </div>
+                 <button id="answer" disabled>Answer</button>
+                 <button id="next">Next</button>
+               </div>
+           </body>
+       </html>
+      </Doctype>
+ <script>
+             
+             let next=document.querySelector("#next");
+             let comment=document.querySelector(".comment");
+             let popDiv=document.querySelector(".main-score-div");
+         const questionText=document.querySelector("#question-text");
+       const topic =document.querySelector(".topic");
+      const radio=document.querySelectorAll(".radio");
+   const ansBut= document.querySelector("#answer");
+   let navIcon=document.querySelector(".nav-icon");
+   let navIconLine=document.querySelectorAll(".nav-icon>i");
+   let ansContain=document.querySelectorAll(".ans-contain");
+   
+   let navDisplay=document.querySelector(".nav-display");
+   const radioTitle=document.querySelectorAll(".radio-title");
+       let count=0;
+       let score=0;let rand;
+       let ajax="agric-ajax.json";
+            
+           
+           
+         document.querySelector(".cancle-pop").onclick=()=>
+      document.querySelector(".main-score-div").style.top="-100%";
+         
+         //fixed nav display codes
+         let click=true
+         navIcon.onclick=function (){
+           if(click){
+           navDisplay.style.left="0";
+           navIconLine[0].style.cssText="margin-left:25%;transform:rotateZ(45deg) translateY(10px) translateX(5px);";
+           navIconLine[1].style.cssText="transform:rotateZ(-45deg) translateX(-5px);";
+           
+           }
+           else{
+           navDisplay.style.left="-100%";
+           navIconLine[0].style.cssText="margin-left:0;transform:rotateZ(0deg) translateY(0px) translateX(0px);";
+           navIconLine[1].style.cssText="transform:rotateZ(0deg) translateX(0px);";
+           
+           }
+           click=!click;
+         }
+      
+      //ajax call beginning
+       let xml=new XMLHttpRequest();
+       xml.open("GET",ajax,true);
+       xml.onload=function(){
+       let question=JSON.parse(xml.responseText);
+      document.querySelector(".object-display").style.display="none";
+           next.innerHTML="Start";
+       topic.innerHTML=question.name;
+        
+        //next click function
+        next.onclick=function (){
+           //on click options ans check codes
+           for(let i=0;i<ansContain.length;i++){
+           ansContain[i].addEventListener("click",clicker)
+           }
+           function clicker(e){
+           if(e.target.className=="radio-title"){
+           e.target.parentElement.children[0].checked=true;
+           ansBut.disabled=false;
+           }
+           }
+           next.innerHTML="Next";
+            document.querySelector(".object-display").style.display="block";
+           rand=Math.floor((Math.random()*question.question.length)+1)-1;
+           for(let i=0;i<radio.length;i++){
+           radio[i].parentElement.children[1].style.color="rgb(230,230,230)";
+         radio[i].disabled=false;
+       }
+     
+           radioTitle[0].innerHTML=
+   question.question[rand].opt1;
+   radioTitle[1].innerHTML=
+   question.question[rand].opt2;
+   radioTitle[2].innerHTML=
+   question.question[rand].opt3;
+   questionText.innerHTML=
+   question.question[rand].question;
+   
+    let solution=question.question[rand].sol;
+    for(let i=0;i<radio.length;i++){
+             radio[i].checked=false;
+         }
+        
+ 
+     
+
+
+         for(let i=0;i<radio.length;i++){
+             radio[i].addEventListener("change",ansButton)
+         }
+         function ansButton(){
+             ansBut.disabled=false;
+         }
+       next.disabled=true;
+       
+       //answer button onclick function
+       
+     ansBut.onclick=function(){
+         //on click options ans check codes
+         for(let i=0;i<ansContain.length;i++){
+         ansContain[i].addEventListener("click",clicker)
+         }
+         function clicker(e){
+         if(e.target.className=="radio-title"){
+         e.target.parentElement.children[0].checked=true;
+         ansBut.disabled=true;
+         }
+         }
+     
+      ansBut.disabled=true;
+          for(let i=0;i<radio.length;i++){
+           radio[i].parentElement.children[1].style.color="rgb(230,230,230)";
+              if(radio[i].checked==true){
+                 radio[i].parentElement.children[1].innerHTML;
+                ansBut.disabled=true;
+                next.disabled=false;
+               
+                if(radio[i].parentElement.children[1].innerHTML==solution){
+        radio[i].parentElement.children[1].style.color="rgb(93,227,107)"; 
+            score++;
+            document.querySelector(".ans-question>i").innerHTML=score;
+
+       }else{
+           radio[i].parentElement.children[1].style.color="rgb(255,55,36)";}
+           count++;
+           if(count>10){
+           count=1;
+             score=0
+                if(radio[i].parentElement.children[1].innerHTML==solution){
+                score=1;
+                document.querySelector(".ans-question>i").innerHTML=score;
+                
+                }
+          document.querySelector(".ans-question>i").innerHTML=score;
+           }
+            else if(count===10){
+               next.innerHTML="continue";
+               popDiv.style.top="0";
+                  document.querySelector(".ans-question>i").innerHTML="0";
+                  document.querySelector(".score-question>i").innerHTML="0";
+                if(score<=3){
+                    comment.innerHTML="Very poor";
+                }
+               else if(score>3 && score<=5){
+                    comment.innerHTML="fair";
+                }
+                else if(score>5 && score<=8){
+                    comment.innerHTML="Excellent";
+                }
+                 else{
+                   comment.innerHTML="Brain burster";
+                 }
+              
+          /*pop up if condition end*/ }
+               
+               
+               document.querySelector(".score-question>i").innerHTML=count;
+               document.querySelector(".pop-total").innerHTML=count;
+               document.querySelector(".pop-ans").innerHTML=score;
+             
+             
+           /*end of second if */}
+           
+          
+          /*end of for loop on click */  }
+         
+
+               for(let i=0;i<radio.length;i++){
+           radio[i].disabled=true;
+           }
+          
+         
+     }
+
+   }         } //end of ajax call
+   xml.send();
+        // topic.innerHTML=question.name;
+
+
+
+
+
+
+       /* let flows=document.querySelectorAll(".flow");
+        for(let i=0;i<flows.length;i++){
+            flows[i].addEventListener("click",showId)
+        }
+          function showId(e){
+             console.log(e.target.id);}
+
+   document.querySelector("div").onclick=(e)=>
+         e.target.remove();*/
+       
+ </script>

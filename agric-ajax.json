@@ -1,0 +1,224 @@
+{
+    "name":"Agric Section",
+    "question":[
+        {
+          "sol":"lawn",
+          "opt1":"cutter",
+          "opt2":"widespread",
+          "opt3":"lawn",
+          "question":"grasses planted on sport field and in area around a building"
+        },
+        {
+          "sol":"inter-cropping",
+          "opt1":"inter-cropping",
+          "opt2":"mono-cropping",
+          "opt3":"pro-farming",
+          "question":"where farmers grow two or more different type of crop on same land"
+        },
+        {
+          "sol":"agriculture",
+          "opt1":"farming",
+          "opt2":"agriculture",
+          "opt3":"science",
+          "question":"the science and art of practicing of cultivating plant and animal"
+        },
+        {
+            "sol":"animal husbandry",
+            "opt1":"domestication",
+            "opt2":"selective breeding",
+            "opt3":"animal husbandry",
+            "question":"The branch of agriculture concerned with animal that are raised for meat"
+          },
+          {
+            "sol":"agronomy",
+            "opt1":"plant breeding",
+            "opt2":"agronomy",
+            "opt3":"ecology",
+            "question":"the science of using plant for food, fuel, fiber is called "
+          },
+          {
+            "sol":"fibers",
+            "opt1":"fibers",
+            "opt2":"roughages",
+            "opt3":"legumes",
+            "question":"certain naturas consist of certain protein"
+          },
+          {
+            "sol":"merino",
+            "opt1":"merino",
+            "opt2":"cotswold",
+            "opt3":"sythetic",
+            "question":"a very soft fine animal wool is called"
+          },
+          {
+            "sol":"spider silk",
+            "opt1":"merino",
+            "opt2":"spider silk",
+            "opt3":"cotswold",
+            "question":"the stongest animals fiber naturally known "
+          },
+          {
+            "sol":"neolithic revolution",
+            "opt1":"colimbian revolution",
+            "opt2":"anthedating era",
+            "opt3":"neolithic revolution",
+            "question":"animal was first dometicated in which era of evolution"
+          },
+          {
+            "sol":"late blight",
+            "opt1":"coffee rust",
+            "opt2":"basal rot",
+            "opt3":"late blight",
+            "question":"phytophlihora is a water mold that causes a diseases called"
+          },
+          {
+            "sol":"apple scab",
+            "opt1":"bunt",
+            "opt2":"apple scab",
+            "opt3":"leaf blister",
+            "question":"venturia inaequalis is a fungus causing which diseases"
+          },
+          {
+            "sol":"anthrax",
+            "opt1":"anthrax",
+            "opt2":"tetanus",
+            "opt3":"mastitis",
+            "question":"highly infectious diseases of cattle caused by bacillus anthracis"
+          },
+          {
+            "sol":"bunt",
+            "opt1":"rabies",
+            "opt2":"blue tongue",
+            "opt3":"bunt",
+            "question":"which of these is not disease common to animals"
+          },
+          {
+            "sol":"pride",
+            "opt1":"pride",
+            "opt2":"parliament",
+            "opt3":"herd",
+            "question":"lions live in social group as family unit is called "
+          },
+          {
+            "sol":"fawn",
+            "opt1":"whelp",
+            "opt2":"fawn",
+            "opt3":"nymph",
+            "question":"name of infant deer is called "
+          },
+          {
+            "sol":"squab",
+            "opt1":"puggle",
+            "opt2":"fry",
+            "opt3":"squab",
+            "question":"name of infant dove is called"
+          },
+          {
+            "sol":"filly",
+            "opt1":"filly",
+            "opt2":"ephyna",
+            "opt3":"colt",
+            "question":"names of female infant horse is called "
+          },
+          {
+            "sol":"legume",
+            "opt1":"protein",
+            "opt2":"water",
+            "opt3":"legume",
+            "question":"which of the below is not a class of food"
+          },
+          {
+            "sol":"maize",
+            "opt1":"beans",
+            "opt2":"egg",
+            "opt3":"maize",
+            "question":"select an option which is odd among the following"
+          },
+          {
+            "sol":"92",
+            "opt1":"92",
+            "opt2":"94",
+            "opt3":"93",
+            "question":"watermellon consist mainly of water with about how many percent"
+          },
+          {
+            "sol":"roughages",
+            "opt1":"water",
+            "opt2":"fibres",
+            "opt3":"roughages",
+            "question":"fibrous indigestable material in vegetable which aid excretion"
+          },
+          {
+            "sol":"deer",
+            "opt1":"deer",
+            "opt2":"cow",
+            "opt3":"sheep",
+            "question":"which of these are not domestic animals"
+          },
+          {
+            "sol":"cattle",
+            "opt1":"cattle",
+            "opt2":"rabbit",
+            "opt3":"dog",
+            "question":"rtypanosomiasis is a vertebrate diseases caused by protozoan common to"
+          },
+          {
+            "sol":"loamy",
+            "opt1":"sandy",
+            "opt2":"clay",
+            "opt3":"loamy",
+            "question":"which soli is considered best in planting"
+          },
+          {
+            "sol":"alyogyne huegelii",
+            "opt1":"alyogyne huegelii",
+            "opt2":"armorpha callifornia",
+            "opt3":"baccharis viminea",
+            "question":"the botanical name for hibiscus is"
+          },
+          {
+            "sol":"felis catus",
+            "opt1":"blattodea",
+            "opt2":"felis catus",
+            "opt3":"cetacea",
+            "question":"the binomia numenclature of cat is"
+          },
+          {
+            "sol":"irrigation",
+            "opt1":"ploughing",
+            "opt2":"rigging",
+            "opt3":"irrigation",
+            "question":"the artificial way of suppling water to a farm is"
+          },
+          {
+            "sol":"herbs",
+            "opt1":"ornament",
+            "opt2":"herbs",
+            "opt3":"bud",
+            "question":"plant, grass, root or fruit used for the medical purpose are"
+          },
+          {
+            "sol":"cereal",
+            "opt1":"cereal",
+            "opt2":"legume",
+            "opt3":"roughage",
+            "question":"a type of grass cultivated its edible grains are called"
+          },
+          {
+            "sol":"ewe",
+            "opt1":"stallion",
+            "opt2":"ewe",
+            "opt3":"steed",
+            "question":"a female sheep as opposed to a ram is called"
+          },
+          {
+          "sol":"viticulture",
+          "opt1":"horticulture",
+          "opt2":"viticulture",
+          "opt3":"sericulture",
+          "question":"cultivation of grape is also known as "
+          }
+          
+
+    ]
+}
