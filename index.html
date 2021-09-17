@@ -137,7 +137,7 @@
               }
               .pop-div-score{
                   position:absolute;width:280px;left:calc(50% - 150px);
-                  top:10%;transition: 0.55s;
+                  top:0%;transition: 0.55s;
                   background: radial-gradient(at top left,rgb(88, 65, 190) ,rgb(29, 9, 116) );
                   border-radius: 5px;position:relative;
                   z-index: 1800;text-align: center;
@@ -251,7 +251,7 @@
                  width:24px;
               }
               .pop-coin{
-              width: 30px;position:absolute;top:-20px;left:50%;z-index:-1;
+              width: 30px;position:absolute;top:00px;left:50%;z-index:-1;
               animation:0.4s 1 linear fill-coin;
              display: none; }
               @keyframes fill-coin{
@@ -630,7 +630,7 @@
                       radioTitle[1].innerHTML=port.opt2;
                       radioTitle[2].innerHTML=port.opt3;
                       questionText.innerHTML=port.question;
-                     click=false;
+                     click=!click;
                       navDisplay.style.top="-120%"
                    document.querySelector(".whole").style.display="none";
                     }
